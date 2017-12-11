@@ -41,6 +41,16 @@ Benchmark.bm(15) do |x|
     end
   end
   puts count
+
+  x.report('progressions') do
+    def progression_sum(max, diff)
+      x = max.div(diff)
+      diff * (x * (x + 1)).div(2)
+    end
+    max -= 1
+    count = progression_sum(max, 3) + progression_sum(max, 5) - progression_sum(max, 15)
+  end
+  puts count
 end
 
 #                       user     system      total        real
