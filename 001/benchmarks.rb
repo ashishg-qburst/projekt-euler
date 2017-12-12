@@ -1,10 +1,5 @@
 require 'benchmark'
 
-# Project Euler - Problem 1
-
-# If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
-# Find the sum of all the multiples of 3 or 5 below 1000.
-
 #                       user     system      total        real
 # mine              1.550000   0.010000   1.560000 (  1.565227)
 # 2333333316666668
@@ -12,8 +7,6 @@ require 'benchmark'
 # 2333333316666668
 # progressions      0.000000   0.000000   0.000000 (  0.000010)
 # 2333333316666668
-
-
 
 Benchmark.bm(15) do |x|
   count = 0
